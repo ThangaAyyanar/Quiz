@@ -6,3 +6,9 @@ Files:
   1. To insert new question and answer to database.
   2. To select question from the database.
   3. Login page if we need to add question to database.
+  
+  
+  testques.php is the starting page if u have any doubt e-mail
+  
+  
+  Visit thangaayyanar.blogspot.com
