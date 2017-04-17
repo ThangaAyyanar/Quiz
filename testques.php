@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION["user"])){
+	$_SESSION["user"]=$_POST["user"];
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -53,7 +59,7 @@ try{
         <div class="page-header">
           <div class="row">
             <div class="col-sm-6"><h1>Quiz For Us</h1></div>
-            <div class="col-sm-3"></div>
+	    <div class="col-sm-3">Welcome <b><?php echo $_SESSION["user"] ?></b></div>
             <div class="col-sm-3"><?php echo date("d-m-y") ?></div>
           </div>
            
@@ -127,7 +133,7 @@ try{
     fwrite($myfile,$txt);
     flock($myfile,LOCK_UN);
     fclose($myfile);
-    echo "good to go";
+    //echo "good to go";
   }else{
     echo "error";
   }
